@@ -33,5 +33,3 @@ void loop() {
 
   while(1); // Stop (so it doesn't repeat forever driving you crazy--you're welcome).
 }
-
-uint8_t _tAC_volume[] = { 200, 100, 67, 50, 40, 33, 29, 22, 11, 2 };
