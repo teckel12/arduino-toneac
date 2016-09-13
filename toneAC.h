@@ -1,13 +1,13 @@
 // ---------------------------------------------------------------------------
-// toneAC Library - v1.4 - 03/29/2013
+// toneAC Library - v1.3 - 08/19/2016
 //
 // AUTHOR/LICENSE:
 // Created by Tim Eckel - teckel@leethost.com
-// Copyright 2013 License: GNU GPL v3 http://www.gnu.org/licenses/gpl-3.0.html
+// Copyright 2016 License: GNU GPL v3 http://www.gnu.org/licenses/gpl-3.0.html
 //
 // LINKS:
-// Project home: http://code.google.com/p/arduino-tone-ac/
-// Blog: http://arduino.cc/forum/index.php/topic,142097.msg1066968.html
+// Project home: https://bitbucket.org/teckel12/arduino-toneac/wiki/Home
+// Blog: http://forum.arduino.cc/index.php?topic=142097.0
 //
 // DISCLAIMER:
 // This software is furnished "as is", without technical support, and with no 
@@ -44,28 +44,26 @@
 // SYNTAX:
 //   toneAC( frequency [, volume [, length [, background ]]] ) - Play a note.
 //     Parameters:
-//       * frequency  - Play the specified frequency indefinitely, turn off with toneAC().
+//       * frequency  - Play the specified frequency indefinitely, turn off with noToneAC().
 //       * volume     - [optional] Set a volume level. (default: 10, range: 0 to 10 [0 = off])
-//       * length     - [optional] Set the length to play in milliseconds. (default: 0 [forever], range: 0 to 2^32-1)
+//       * length     - [optional] Set the length to play in milliseconds. (default: 0 [forever], range: 0 to 4294967295 [49.7 days])
 //       * background - [optional] Play note in background or pause till finished? (default: false, values: true/false)
-//   toneAC()    - Stop playing.
-//   noToneAC()  - Same as toneAC().
+//   noToneAC()  - Stop playing.
 //
 // HISTORY:
 //
-// 03/29/2013 v1.4 - Fixed to work with Teensy++ 2.0 and probably the 1.0
-// model as well.
-//
-// 01/30/2013 v1.3 - TONEAC_TINY switch now uses the function toneAC_tiny()
-// instead of toneAC() to avoid problems due to the fact that the syntax
-// changes when using TONEAC_TINY (no volume or background parameters).
+// 08/19/2016 v1.3 - Fixed to work with Teensy++ 2.0 and probably the 1.0
+// model as well. Cleaned up and organized code which resulted in smaller
+// compiled code size and no longer the need for the TONEAC_TINY switch and
+// alternate method.
 //
 // 01/27/2013 v1.2 - Fixed a counter error which went "over the top" and caused
 // periods of silence (thanks Krodal). For advanced users needing tight code,
 // the TONEAC_TINY switch in toneAC.h activates a version of toneAC() that
-// saves 110 bytes. With TONEAC_TINY, the syntax is toneAC(frequency, length)
-// while playing the note at full volume forever in the background. Added
-// support for the ATmega 640, 644, 1281, 1284P and 2561 microcontrollers.
+// saves 30-130 bytes depending on controller. With TONEAC_TINY, the syntax is
+// toneAC_tiny(frequency, length) which plays the note at full volume in the
+// background. Added support for the ATmega 640, 644, 1281, 1284P and 2561
+// microcontrollers.
 //
 // 01/16/2013 v1.1 - Option to play notes in background, returning control back
 // to your sketch for processing while note plays (similar to the way the tone
@@ -87,8 +85,6 @@
     #include <WProgram.h>
   #endif
 
-  //#define TONEAC_TINY // Uncomment to use alternate function toneAC(frequency, length) that saves 110 bytes.
-  
   #if defined (__AVR_ATmega32U4__) || defined(__AVR_ATmega640__) || defined(__AVR_ATmega1280__) || defined(__AVR_ATmega1281__) || defined(__AVR_ATmega2560__) || defined(__AVR_ATmega2561__) || defined(__AVR_AT90USB646__) || defined(__AVR_AT90USB1286__)
     #define PWMT1AMASK DDB5
     #define PWMT1BMASK DDB6
@@ -110,10 +106,7 @@
     #define TIMSK1 TIMSK
   #endif
 
-  #ifndef TONEAC_TINY
-    void toneAC(unsigned long frequency = 0, uint8_t volume = 10, unsigned long length = 0, uint8_t background = false);
-  #else
-    void toneAC_tiny(unsigned long frequency = 0, unsigned long length = 0);
-  #endif
+  void toneAC(unsigned long frequency = 0, uint8_t volume = 10, unsigned long length = 0, uint8_t background = false);
+  void toneAC_playNote(unsigned long frequency, uint8_t volume);
   void noToneAC();
 #endif
