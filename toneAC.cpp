@@ -11,12 +11,12 @@ unsigned long _tAC_time; // Used to track end note with timer when playing note 
 uint8_t _tAC_volume[] = { 200, 100, 67, 50, 40, 33, 29, 22, 11, 2 }; // Duty for linear volume control.
 
 void toneAC(unsigned long frequency, uint8_t volume, unsigned long length, uint8_t background) {
-  if (frequency == 0 || volume == 0) { noToneAC(); return; } // If frequency or volume are 0, turn off sound and return.
-  if (volume > 10) volume = 10;                              // Make sure volume is in range (1 to 10).
+  if (frequency == NOTONEAC || volume == 0) { noToneAC(); return; } // If frequency or volume are 0, turn off sound and return.
+  if (volume > 10) volume = 10;       // Make sure volume is in range (1 to 10).
 
   toneAC_playNote(frequency, volume); // Routine that plays the note using timers.
 
-  if (length == 0) return;            // If length is zero, play note forever.
+  if (length == PLAY_FOREVER) return; // If length is zero, play note forever.
 
   if (background) {                   // Background tone playing, returns control to your sketch.
     _tAC_time = millis() + length;    // Set when the note should end.

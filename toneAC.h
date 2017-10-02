@@ -52,6 +52,9 @@
 //
 // HISTORY:
 //
+// 10/01/2017 V1.4 - Added NOTONEAC and PLAY_FOREVER macros for code clarity
+// and improved readability. ~Gabriel Staples, www.ElectricRCAircraftGuy.com
+//
 // 08/19/2016 v1.3 - Fixed to work with Teensy++ 2.0 and probably the 1.0
 // model as well. Cleaned up and organized code which resulted in smaller
 // compiled code size and no longer the need for the TONEAC_TINY switch and
@@ -106,7 +109,10 @@
     #define TIMSK1 TIMSK
   #endif
 
-  void toneAC(unsigned long frequency = 0, uint8_t volume = 10, unsigned long length = 0, uint8_t background = false);
+  #define NOTONEAC 0
+  #define PLAY_FOREVER 0
+
+  void toneAC(unsigned long frequency = NOTONEAC, uint8_t volume = 10, unsigned long length = PLAY_FOREVER, uint8_t background = false);
   void toneAC_playNote(unsigned long frequency, uint8_t volume);
   void noToneAC();
 #endif
