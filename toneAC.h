@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// toneAC Library - v1.3 - 08/19/2016
+// toneAC Library - v1.4 - 10/02/2017
 //
 // AUTHOR/LICENSE:
 // Created by Tim Eckel - teckel@leethost.com
@@ -52,7 +52,7 @@
 //
 // HISTORY:
 //
-// 10/01/2017 V1.4 - Added NOTONEAC and PLAY_FOREVER macros for code clarity
+// 10/02/2017 V1.4 - Added NOTONEAC and PLAY_FOREVER macros for code clarity
 // and improved readability. ~Gabriel Staples, www.ElectricRCAircraftGuy.com
 //
 // 08/19/2016 v1.3 - Fixed to work with Teensy++ 2.0 and probably the 1.0
