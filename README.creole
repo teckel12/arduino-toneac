@@ -2,12 +2,6 @@
 
 ----
 
-== Index ==
-
-<<toc Home>>
-
-----
-
 == Introduction ==
 
 Replacement to the standard tone library with many advantages:
