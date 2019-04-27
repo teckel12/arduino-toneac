@@ -53,7 +53,7 @@ SYNTAX:
 HISTORY:
 
 04/27/2019 v1.5.0 - Moved repo to Github and made toneAC compatible with
-Arduino library manager.
+Arduino library manager. 
 
 10/02/2017 v1.4 - Added NOTONEAC and PLAY_FOREVER macros for code clarity
 and improved readability. ~Gabriel Staples, www.ElectricRCAircraftGuy.com
