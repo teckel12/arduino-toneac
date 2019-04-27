@@ -98,8 +98,6 @@ Connection is very similar to a piezo or standard speaker. Except, instead of co
 == Example ==
 
 {{{
-#!C++
-
 #include <toneAC.h>
 
 void setup() {} // Nothing to setup, just start playing!
