@@ -1,9 +1,9 @@
-// ---------------------------------------------------------------------------
-// Created by Tim Eckel - teckel@leethost.com
-// Copyright 2016 License: GNU GPL v3 http://www.gnu.org/licenses/gpl-3.0.html
-//
-// See "toneAC.h" for purpose, syntax, version history, links, and more.
-// ---------------------------------------------------------------------------
+/* ---------------------------------------------------------------------------
+Created by Tim Eckel - teckel@leethost.com
+Copyright 2019 License: GNU GPL v3 http://www.gnu.org/licenses/gpl-3.0.html
+
+See "toneAC.h" for purpose, syntax, version history, links, and more.
+--------------------------------------------------------------------------- */
 
 #include "toneAC.h"
 

@@ -1,12 +1,12 @@
 /* ---------------------------------------------------------------------------
-  Connect your piezo buzzer (without internal oscillator) or speaker to these pins:
-   Pins  9 & 10 - ATmega328, ATmega128, ATmega640, ATmega8, Uno, Leonardo, etc.
-   Pins 11 & 12 - ATmega2560/2561, ATmega1280/1281, Mega
-   Pins 12 & 13 - ATmega1284P, ATmega644
-   Pins 14 & 15 - Teensy 2.0
-   Pins 25 & 26 - Teensy++ 2.0
-  Be sure to include an inline 100 ohm resistor on one pin as you normally do when connecting a piezo or speaker.
-  ---------------------------------------------------------------------------*/
+Connect a piezo buzzer (without internal oscillator) or speaker to these pins:
+  Pins  9 & 10 - ATmega328, ATmega128, ATmega640, ATmega8, Uno, Leonardo, etc.
+  Pins 11 & 12 - ATmega2560/2561, ATmega1280/1281, Mega
+  Pins 12 & 13 - ATmega1284P, ATmega644
+  Pins 14 & 15 - Teensy 2.0
+  Pins 25 & 26 - Teensy++ 2.0
+Be sure to include an inline 100 ohm resistor on one pin as you normally do when connecting a piezo or speaker.
+--------------------------------------------------------------------------- */
 
 #include <toneAC.h>
 
@@ -31,5 +31,5 @@ void loop() {
     delay(noteDuration * 4 / 3); // Wait while the tone plays in the background, plus another 33% delay between notes.
   }
 
-  while (1); // Stop (so it doesn't repeat forever driving you crazy--you're welcome).
+  while(1); // Stop (so it doesn't repeat forever driving you crazy--you're welcome).
 }

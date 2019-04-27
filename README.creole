@@ -20,11 +20,11 @@ First off, toneAC is **SUPERIOR** to [[https://bitbucket.org/teckel12/arduino-to
 
 == Download & Install ==
 
-**[[https://bitbucket.org/teckel12/arduino-toneac/downloads/toneAC_v1.2.zip|v1.2 Released]]**
+**[[https://github.com/teckel12/arduino-toneac/releases|v1.5.0 Released]]**
 
 Save the .zip file to your desktop, then use the [[https://www.arduino.cc/en/Guide/Libraries#toc4|Importing a .zip Library]] instructions to import the library into the Arduino IDE.
 
-(7,405 downloads on Google Code before being closed)
+(12,437 downloads on BitBucket before moving to Github, 7,405 downloads on Google Code before being closed)
 
 //If you wish to fork this library, please create a private repository as to not confuse others trying to download the latest official version.//
 
@@ -80,6 +80,8 @@ Connection is very similar to a piezo or standard speaker. Except, instead of co
 **noToneAC()** - Same as toneAC().
 
 == History ==
+
+**v1.5.0 Released 04/27/2019** - Moved repo to Github and made toneAC compatible with Arduino library manager.
 
 **v1.4 - Released 10/02/2017** - Added NOTONEAC and PLAY_FOREVER macros for code clarity and improved readability. ~Gabriel Staples, www.ElectricRCAircraftGuy.com
 
