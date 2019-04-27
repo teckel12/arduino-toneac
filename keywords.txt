@@ -12,7 +12,7 @@
 
 toneAC	KEYWORD2
 noToneAC	KEYWORD2
-toneAC_tiny	KEYWORDS2
+toneAC_tiny	KEYWORD2
 
 ###################################
 # Constants (LITERAL1)
