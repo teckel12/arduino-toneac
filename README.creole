@@ -1,7 +1,5 @@
 = toneAC Arduino Library for Arduino =
 
-----
-
 == Introduction ==
 
 Replacement to the standard tone library with many advantages:
@@ -16,13 +14,9 @@ Replacement to the standard tone library with many advantages:
 
 Disadvantages are that it must use certain pins and it uses two pins instead of one. But, if you're flexible with your pin choices, this is a great upgrade. It also uses timer 1 instead of timer 2, which may free up a conflict you have with the tone library. It exclusively uses port registers for the fastest and smallest code possible (which also makes it **ONLY compatible with ATmega microcontrollers**).
 
-----
-
 == Difference between toneAC and toneAC2 ==
 
 First off, toneAC is **SUPERIOR** to [[https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home|toneAC2]]. It's called [[https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home|toneAC2]] only because it uses timer 2, not because it's a newer version of toneAC. [[https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home|toneAC2]] is an alternate but **INFERIOR** version of toneAC that uses timer 2 instead of timer 1 and allows for any two pins to be used. You should use toneAC instead of [[https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home|toneAC2]] if at all possible because toneAC is more accurate, higher quality, allows for higher frequencies, uses fewer CPU cycles, and creates smaller code. However, if you're having a conflict with timer 1, or just can't use the default PWM pins for timer 1, then [[https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home|toneAC2]] may be your answer.
-
-----
 
 == Download & Install ==
 
@@ -33,8 +27,6 @@ Save the .zip file to your desktop, then use the [[https://www.arduino.cc/en/Gui
 (7,405 downloads on Google Code before being closed)
 
 //If you wish to fork this library, please create a private repository as to not confuse others trying to download the latest official version.//
-
-----
 
 == Show Your Appreciation ==
 
@@ -57,15 +49,11 @@ Help future development by making a small donation (the teckel@bex.net payee is 
 * Regalia S. $5 
 * Shawn C. $30
 
-----
-
 == Compatibility ==
 
 toneAC is written specifically for the ATmega AVR platform as it uses timer events that only exist with this platform.  Compatibility includes the following platforms/microcontrollers:
 
 * ATmega328, ATmega128, ATmega640, ATmega8, Uno, Leonardo, ATmega2560/2561, ATmega1280/1281, Mega, ATmega1284P, ATmega644, Teensy 2.0, Teensy++ 2.0
-
-----
 
 == Connection Example ==
 
@@ -79,8 +67,6 @@ Connection is very similar to a piezo or standard speaker. Except, instead of co
 
 {{https://bitbucket.org/repo/Kg6beL/images/3490992041-toneAC3.png|toneAC3.png}}
 
-----
-
 == Syntax ==
 
 **toneAC( frequency [, volume [, length [, background ]]] )** - Play a note.
@@ -92,8 +78,6 @@ Connection is very similar to a piezo or standard speaker. Except, instead of co
 **toneAC()** - Stop output.
 
 **noToneAC()** - Same as toneAC().
-
-----
 
 == History ==
 
@@ -107,13 +91,9 @@ Connection is very similar to a piezo or standard speaker. Except, instead of co
 
 **v1.0 - Released 01/11/2013** - Initial release.
 
-----
-
 == Support Forum ==
 
 [[http://forum.arduino.cc/index.php?topic=142097.0|toneAC support forum]]
-
-----
 
 == Example ==
 
@@ -135,8 +115,6 @@ void loop() {
 }
 }}}
 
-----
-
 == How Does It Work? ==
 
 The library is named toneAC because it produces an alternating push/pull between two pins. It's not really AC (alternating current) as in-wall electrical wiring because it's a square wave and never produces a negative voltage. However, the effect of the alternating push/pull creates an effective double voltage differential which produces the higher volume level.
@@ -145,14 +123,10 @@ The ATmega's PWM takes care of the alternating push/pull so the accuracy is exac
 
 The sound quality difference has to do with allowing the Arduino's PWM to take care of everything and careful programming. Longer piezo life happens because instead of driving the transducer disc only ever in one direction (deforming the disc and reducing sound and quality), it drives it in both directions keeping the disc uniform.
 
-----
-
 == Cool User Projects Using toneAC ==
 
 |[[https://www.youtube.com/watch?v=RRxPJvIBGxM|{{https://bitbucket.org/repo/Kg6beL/images/3758661730-soundtube.jpg|YouTube of Arduino Soundtube (Kundt's Tube)}}]]|[[https://www.youtube.com/watch?v=8FrwLX6i0J0|{{https://bitbucket.org/repo/Kg6beL/images/4144195896-ee47final.jpg|YouTube of EE 47 Final Project}}]]|
 |[[http://arduino-info.wikispaces.com/Project-HandBat|{{https://bitbucket.org/repo/Kg6beL/images/3974880769-toneAC-handbat.jpg|Project-HandBat}}]]||
-
-----
 
 == My Other Arduino Libraries ==
 
