@@ -26,8 +26,6 @@ Save the .zip file to your desktop, then use the [[https://www.arduino.cc/en/Gui
 
 (12,437 downloads on BitBucket before moving to Github, 7,405 downloads on Google Code before being closed)
 
-//If you wish to fork this library, please create a private repository as to not confuse others trying to download the latest official version.//
-
 == Show Your Appreciation ==
 
 Help future development by making a small donation (the teckel@bex.net payee is correct).
