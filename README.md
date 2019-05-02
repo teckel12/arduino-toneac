@@ -83,7 +83,7 @@ Connection is very similar to a piezo or standard speaker. Except, instead of co
 
 **v1.5.0 - Released 04/27/2019** - Moved repo to GitHub and made toneAC compatible with Arduino library manager.
 
-**v1.4 - Released 10/02/2017** - Added NOTONEAC and PLAY_FOREVER macros for code clarity and improved readability. ~Gabriel Staples, www.ElectricRCAircraftGuy.com
+**v1.4 - Released 10/02/2017** - Added NOTONEAC and PLAY_FOREVER macros for code clarity and improved readability. Gabriel Staples, www.ElectricRCAircraftGuy.com
 
 **v1.3 - Released 08/19/2016** - Fixed to work with Teensy++ 2.0 and probably the 1.0 model as well. Cleaned up and organized code which resulted in smaller compiled code size and no longer the need for the TONEAC_TINY switch and alternate method.
 
