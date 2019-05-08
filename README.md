@@ -16,7 +16,7 @@ Disadvantages are that it must use certain pins and it uses two pins instead of 
 
 ## Difference between toneAC and toneAC2
 
-First off, toneAC is **SUPERIOR** to [toneAC2](https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home). It's called [toneAC2](https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home) only because it uses timer 2, not because it's a newer version of toneAC. [https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home](toneAC2) is an alternate but **INFERIOR** version of toneAC that uses timer 2 instead of timer 1 and allows for any two pins to be used. You should use toneAC instead of [toneAC2](https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home) if at all possible because toneAC is more accurate, higher quality, allows for higher frequencies, uses fewer CPU cycles, and creates smaller code. However, if you're having a conflict with timer 1, or just can't use the default PWM pins for timer 1, then [toneAC2](https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home) may be your answer.
+First off, toneAC is **SUPERIOR** to [toneAC2](https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home). It's called [toneAC2](https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home) only because it uses timer 2, not because it's a newer version of toneAC. [toneAC2](https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home) is an alternate but **INFERIOR** version of toneAC that uses timer 2 instead of timer 1 and allows for any two pins to be used. You should use toneAC instead of [toneAC2](https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home) if at all possible because toneAC is more accurate, higher quality, allows for higher frequencies, uses fewer CPU cycles, and creates smaller code. However, if you're having a conflict with timer 1, or just can't use the default PWM pins for timer 1, then [toneAC2](https://bitbucket.org/teckel12/arduino-toneac2/wiki/Home) may be your answer.
 
 ## Download & Install
 
@@ -127,7 +127,7 @@ The sound quality difference has to do with allowing the Arduino's PWM to take c
 
 [![YouTube of Arduino Soundtube (Kundt's Tube)](https://bitbucket.org/repo/Kg6beL/images/3758661730-soundtube.jpg)](https://www.youtube.com/watch?v=RRxPJvIBGxM) | [![YouTube of EE 47 Final Project](https://bitbucket.org/repo/Kg6beL/images/4144195896-ee47final.jpg)](https://www.youtube.com/watch?v=8FrwLX6i0J0)
 --- | ---
-[![Project-HandBat](https://bitbucket.org/repo/Kg6beL/images/3974880769-toneAC-handbat.jpg)](https://arduino-info.wikispaces.com/Project-HandBat) |
+
 
 ## My Other Arduino Libraries
 
