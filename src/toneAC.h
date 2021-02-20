@@ -27,7 +27,7 @@ USAGE:
 Connection is very similar to a piezo or standard speaker. Except, instead
 of connecting one speaker wire to ground you connect both speaker wires to
 Arduino pins. The pins you connect to are specific, as toneAC lets the
-ATmega microcontroller do all the pin timing and switching. This is
+ATmega/ESP32 microcontroller do all the pin timing and switching. This is
 important due to the high switching speed possible with toneAC and to make
 sure the pins are alyways perfectly out of phase with each other
 (push/pull). See the below CONNECTION section for which pins to use for
@@ -39,7 +39,7 @@ CONNECTION:
   Pins 11 & 12 - ATmega2560/2561, ATmega1280/1281, Mega
   Pins 12 & 13 - ATmega1284P, ATmega644
   Pins 14 & 15 - Teensy 2.0
-  Pins 25 & 26 - Teensy++ 2.0
+  Pins 25 & 26 - Teensy++ 2.0, ESP32
 
 SYNTAX:
   toneAC( frequency [, volume [, length [, background ]]] ) - Play a note.

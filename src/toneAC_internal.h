@@ -10,7 +10,7 @@ See "toneAC.h" for purpose, syntax, version history, links, and more.
 
   #include "toneAC.h"
 
-  #if !defined(__AVR__)
+  #if !defined(__AVR__) && !defined(ESP32)
     #error Unsupported architecture
   #endif
 
