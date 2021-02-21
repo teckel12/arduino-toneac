@@ -4,7 +4,7 @@ Connect a piezo buzzer (without internal oscillator) or speaker to these pins:
   Pins 11 & 12 - ATmega2560/2561, ATmega1280/1281, Mega
   Pins 12 & 13 - ATmega1284P, ATmega644
   Pins 14 & 15 - Teensy 2.0
-  Pins 25 & 26 - Teensy++ 2.0
+  Pins 25 & 26 - Teensy++ 2.0, ESP32
 Be sure to include an inline 100 ohm resistor on one pin as you normally do when connecting a piezo or speaker.
 --------------------------------------------------------------------------- */
 

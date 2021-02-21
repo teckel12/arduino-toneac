@@ -27,7 +27,7 @@ USAGE:
 Connection is very similar to a piezo or standard speaker. Except, instead
 of connecting one speaker wire to ground you connect both speaker wires to
 Arduino pins. The pins you connect to are specific, as toneAC lets the
-ATmega microcontroller do all the pin timing and switching. This is
+ATmega/ESP32 microcontroller do all the pin timing and switching. This is
 important due to the high switching speed possible with toneAC and to make
 sure the pins are alyways perfectly out of phase with each other
 (push/pull). See the below CONNECTION section for which pins to use for
@@ -39,7 +39,7 @@ CONNECTION:
   Pins 11 & 12 - ATmega2560/2561, ATmega1280/1281, Mega
   Pins 12 & 13 - ATmega1284P, ATmega644
   Pins 14 & 15 - Teensy 2.0
-  Pins 25 & 26 - Teensy++ 2.0
+  Pins 25 & 26 - Teensy++ 2.0, ESP32
 
 SYNTAX:
   toneAC( frequency [, volume [, length [, background ]]] ) - Play a note.
@@ -90,31 +90,9 @@ to control a two-pin dual LED).
     #include <WProgram.h>
   #endif
 
-  #if defined (__AVR_ATmega32U4__) || defined(__AVR_ATmega640__) || defined(__AVR_ATmega1280__) || defined(__AVR_ATmega1281__) || defined(__AVR_ATmega2560__) || defined(__AVR_ATmega2561__) || defined(__AVR_AT90USB646__) || defined(__AVR_AT90USB1286__)
-    #define PWMT1AMASK DDB5
-    #define PWMT1BMASK DDB6
-    #define PWMT1DREG DDRB
-    #define PWMT1PORT PORTB
-  #elif defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega644__) || defined(__AVR_ATmega644P__)
-    #define PWMT1AMASK DDD4
-    #define PWMT1BMASK DDD5
-    #define PWMT1DREG DDRD
-    #define PWMT1PORT PORTD
-  #else
-    #define PWMT1AMASK DDB1
-    #define PWMT1BMASK DDB2
-    #define PWMT1DREG DDRB
-    #define PWMT1PORT PORTB
-  #endif
-
-  #if defined(__AVR_ATmega8__) || defined(__AVR_ATmega128__)
-    #define TIMSK1 TIMSK
-  #endif
-
   #define NOTONEAC 0
   #define PLAY_FOREVER 0
 
   void toneAC(unsigned long frequency = NOTONEAC, uint8_t volume = 10, unsigned long length = PLAY_FOREVER, uint8_t background = false);
-  void toneAC_playNote(unsigned long frequency, uint8_t volume);
   void noToneAC();
 #endif

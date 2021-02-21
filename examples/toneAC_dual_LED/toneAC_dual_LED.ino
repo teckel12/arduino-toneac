@@ -4,7 +4,7 @@ Connect a two-pin dual LED to the following pins with inline 220 ohm resistor.
   Pins 11 & 12 - ATmega2560/2561, ATmega1280/1281, Mega
   Pins 12 & 13 - ATmega1284P, ATmega644
   Pins 14 & 15 - Teensy 2.0
-  Pins 25 & 26 - Teensy++ 2.0
+  Pins 25 & 26 - Teensy++ 2.0, ESP32
 Connect the center lead of a potentiometer to analog pin A0 and the other two leads to +5V and ground.
 --------------------------------------------------------------------------- */
 
