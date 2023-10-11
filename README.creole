@@ -1,15 +1,2 @@
-= toneAC Arduino Library for Arduino =
 
 Repo moved to: https://bitbucket.org/teckel12/arduino-toneac/wiki/Home
-
-== Introduction ==
-
-Replacement to the standard tone library with many advantages:
-
-* Nearly twice the volume (because it uses two out of phase pins in push/pull fashion)
-* Higher quality (less clicking)
-* Capability of producing higher frequencies (even if microcontroller is running at a lower clock speed)
-* Nearly 1.5k smaller compiled code
-* Bug fixes (standard tone library can generate some odd and unpredictable results)
-* Can set not only the frequency but also the sound volume
-* Less stress on the speaker so it will last longer and sound better
